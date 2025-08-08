@@ -3,7 +3,7 @@
 An approach, in Chinese keyboard, to predict and rank user's possible target candidate in candidate list in rime, by using a BERT model. / 这是一个基于BERT模型，在中文输入法环境下预测并排序用户最可能想要的候选词的一个rime输入法功能。
 
 由本人和XYKK05(github用户名)共同开发。同时感谢hchunhui处拿来的json.lua文件(这个文件是开源的，项目地址https://github.com/hchunhui/librime-cloud)，以及感谢3q-u大佬处拿来的simplehttp.dll文件(项目地址：https://github.com/3q-u/rime-trans)。
-目前还很不完善，会继续优化~
+目前还很不完善，预测效果可以说很糟糕，而且智能排序时会有卡顿感(这里说一句抱歉！)，会继续优化~
 
 **功能特点:**
 用户敲下拼音后，按下键盘上的"~"键，候选词们会被按照用户历史输入的50个文字的上下文，对现在拼音所对应的候选词进行重新排序。目的是让用户需要的词排在最前面，而不受传统的词频权重排序的困扰(比如是时事式，的地得，包子豹子，生活生火……)。注意现阶段触发智能排序后，候选词栏将不会显示生僻字和含有生僻字的词。
