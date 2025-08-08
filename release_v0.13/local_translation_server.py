@@ -18,7 +18,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 class BERTSimilarityCalculator:
-    def __init__(self, model_path="F:\For_tencent_Chinese_Embeddings\Chinese_roberta_L-12_H-512"):
+    def __init__(self, model_path="F:\For_tencent_Chinese_Embeddings\Chinese_roberta_L-12_H-512"): # 改为这个文件在你电脑里的地址,这个模型需要自己下，github README文件有下载地址注意地址的文件夹层级不要出现重名情况
         self.tokenizer = BertTokenizer.from_pretrained(model_path,num_threads=4)
         self.model = BertModel.from_pretrained(model_path)
         
@@ -71,12 +71,12 @@ def calculate_similarity():
         data = request.get_json()
         candidate_words = data.get('candidates', [])
 
-        with open("D:\\For_Rime\\For_Rime_config\\rime_recent_chars.txt", 'r', encoding='utf-8') as file:
+        with open("D:\\For_Rime\\For_Rime_config\\rime_recent_chars.txt", 'r', encoding='utf-8') as file: #改为这个文件在你电脑里的地址
             input_text = file.read()
         
         similarities = calculator.calculate_similarities(input_text, candidate_words)
 
-        with open("D:\\For_Rime\\For_Rime_config\\candidates_weight.txt", "w", encoding="utf-8") as f:
+        with open("D:\\For_Rime\\For_Rime_config\\candidates_weight.txt", "w", encoding="utf-8") as f: #改为这个文件在你电脑里的地址
             for word, similarity in similarities.items():
                 f.write(f"{word} {similarity:.4f}\n")
 
