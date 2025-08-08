@@ -84,7 +84,7 @@ local function init(env) -- 初始化模块的运行时环境，当 RIME 加载�
                 env.last_commit_text = commit_text
                 -- 记录到文件
                 local text_in_log_file = ""
-                local log_file = io.open("D:\\For_Rime\\For_Rime_config\\rime_recent_chars.txt", "r")
+                local log_file = io.open("D:\\For_Rime\\For_Rime_config\\rime_recent_chars.txt", "r") -- 改为这个文件在你电脑里的地址
                 if log_file then
                     text_in_log_file = log_file:read("*a")
                     log_file:close()
@@ -106,14 +106,14 @@ local function init(env) -- 初始化模块的运行时环境，当 RIME 加载�
                         table.insert(last_30, allowed_chars[i])
                     end
                     local new_content = table.concat(last_30)
-                    local file = io.open("D:\\For_Rime\\For_Rime_config\\rime_recent_chars.txt", "w")
+                    local file = io.open("D:\\For_Rime\\For_Rime_config\\rime_recent_chars.txt", "w") -- 改为这个文件在你电脑里的地址
                     if file then
                         file:write(new_content)
                         file:close()
                     end
                 end
 
-                local test_file = io.open("D:\\For_Rime\\For_Rime_config\\rime_recent_chars.txt", "a")
+                local test_file = io.open("D:\\For_Rime\\For_Rime_config\\rime_recent_chars.txt", "a") -- 改为这个文件在你电脑里的地址
                 if test_file then
                     test_file:write(commit_text)
                     test_file:close()
@@ -158,12 +158,12 @@ local function select_character(key, env)
     end
 
     if (actual_key == "BackSpace" or actual_key == "Delete")  and commit_text == "" then
-        delete_last_character("D:\\For_Rime\\For_Rime_config\\rime_recent_chars.txt")
+        delete_last_character("D:\\For_Rime\\For_Rime_config\\rime_recent_chars.txt") -- 改为这个文件在你电脑里的地址
       --   return 1  -- kAccepted
     end
 
     if actual_key == "space" and commit_text == "" then
-      local test_file = io.open("D:\\For_Rime\\For_Rime_config\\rime_recent_chars.txt", "a")
+      local test_file = io.open("D:\\For_Rime\\For_Rime_config\\rime_recent_chars.txt", "a") -- 改为这个文件在你电脑里的地址
       if test_file then
          test_file:write(" ")
          test_file:close()
