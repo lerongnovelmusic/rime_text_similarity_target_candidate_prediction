@@ -21,7 +21,9 @@ rime_personal_debug_log.txt: 可以储存一些调试信息，但是目前没有
 
 3,把simplehttp.dll放到小狼毫程序文件夹里
 
-4,打开local_translation_server.py, select_character.lua, 搜索注释“改为这个文件在你电脑里的地址”，然后在对应的行里修改文件路径。
+5,从https://huggingface.co/uer/chinese_roberta_L-12_H-512/tree/main处下载BERT模型文件，解压后会是叫“Chinese_roberta_L-12_H-512”的文件夹。
+
+4,打开local_translation_server.py, select_character.lua, 搜索注释“改为这个文件在你电脑里的地址”，然后在对应的行里修改它们使用的模型文件夹和txt文件的路径。
 
 5,运行local_translation_server.py，应该会提示缺少一些库，安装库即可，推荐多用不同的镜像，清华啊，阿里啊都试试。local_translation_server.py要运行成功
 
