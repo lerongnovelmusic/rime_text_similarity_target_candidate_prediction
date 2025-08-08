@@ -10,7 +10,7 @@ An approach, in Chinese keyboard, to predict and rank user's possible target can
 
 (注意: 本功能在rime的reduce_english_filter.lua文件上直接修改得来，这个lua文件原本的功能已经被移除。所以如果客官需要保留原reduce_english_filter.lua地功能，可能需要自己调整schema.yaml文件来适配，万分抱歉QWQ。)
 
-rime_recent_chars.txt: 储存着用户的历史输入，仅动态保留最近输入的50个字。
+rime_recent_chars.txt: 储存着用户的历史输入，仅动态保留最近输入的30个字。
 candidates_weight.txt: 放着用户触发智能排序后，候选词栏中的候选词们的相似度数值。
 rime_personal_debug_log.txt: 可以储存一些调试信息，但是目前没有使用。
 
