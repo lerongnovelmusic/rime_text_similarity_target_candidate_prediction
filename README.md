@@ -57,7 +57,7 @@ An approach, in Chinese keyboard, to predict and rank user's possible target can
 5. **重新部署rime**：
    - 重新部署rime即可
      
-以后，如果想要开启智能排序功能，只要确保local_translation_server.py在电脑后台运行着就OK啦。
+> ⭐ 以后，如果想要开启智能排序功能，只要确保local_translation_server.py在电脑后台运行着就OK啦~
 ---
 
 ## 致谢
